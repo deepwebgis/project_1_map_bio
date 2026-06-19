@@ -3,6 +3,8 @@ import { useState } from "react";
 import "./App.css";
 import Mapa from "./components/Map";
 import Button from "./components/Button";
+import SunburstChart from "./components/Chart";
+import StackedChart from "./components/StackedAreaChart";
 
 function App() {
   return (
@@ -33,7 +35,14 @@ function App() {
           </main>
 
           {/* Painel direito */}
-          <aside className="w-[25%] border-l bg-black/85">Painel direito</aside>
+          <aside className="w-[25%] border-l bg-black/85">
+            <div>
+              <SunburstChart></SunburstChart>
+            </div>
+            <div>
+              <StackedChart></StackedChart>
+            </div>
+          </aside>
         </div>
       </div>
     </div>
