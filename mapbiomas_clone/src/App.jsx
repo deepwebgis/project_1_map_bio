@@ -6,24 +6,36 @@ import Button from "./components/Button";
 
 function App() {
   return (
-    <div className="h-screen w-screen grid grid-cols-[320px_1fr_380px]">
+    <div className="h-screen w-screen flex">
       {/* Sidebar esquerda */}
-      <aside className="border-r bg-black/85">
+      <aside className="w-[20%] border-r bg-black/85">
         <Button
           name="Cobertura"
           borderColor="border-green-800"
           subItems={["Coberturas", "Transições"]}
-        ></Button>
-        <Button name="Desmatamento" borderColor="border-orange-700"></Button>
+        />
+
+        <Button name="Desmatamento" borderColor="border-orange-700" />
       </aside>
 
-      {/* Conteúdo principal */}
-      <main className="overflow-hidden">
-        <Mapa></Mapa>
-      </main>
+      {/* Área principal (topbar + mapa + painel direito) */}
+      <div className="w-[80%] flex flex-col">
+        {/* Barra superior */}
+        <header className="h-16 border-b bg-black/85 flex items-center px-4">
+          Barra superior
+        </header>
 
-      {/* Sidebar direita */}
-      <aside className="border-l bg-white">Painel direito</aside>
+        {/* Conteúdo abaixo da barra */}
+        <div className="flex flex-1">
+          {/* Centro */}
+          <main className="w-[75%] overflow-hidden">
+            <Mapa />
+          </main>
+
+          {/* Painel direito */}
+          <aside className="w-[25%] border-l bg-black/85">Painel direito</aside>
+        </div>
+      </div>
     </div>
   );
 }
