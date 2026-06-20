@@ -36,8 +36,18 @@ function App() {
 
           {/* Painel direito */}
           <aside className="w-[25%] border-l bg-black/85">
-            <div>
-              <SunburstChart></SunburstChart>
+            <div className="border border-gray-600 bg-black/80 ">
+              <p className="text-gray-400 px-4 py-10">
+                Cobertura • Cobertura por Classe • 2024
+              </p>
+
+              <div className="px-5">
+                <button className="bg-gray-800 border rounded-xl px-5 py-3">
+                  Visualizado no Mapa
+                </button>
+              </div>
+
+              <SunburstChart />
             </div>
             <div>
               <StackedChart></StackedChart>

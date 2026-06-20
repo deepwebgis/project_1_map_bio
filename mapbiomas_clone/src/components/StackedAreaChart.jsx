@@ -76,6 +76,8 @@ export default function StackedChart({ csvPath = "/clase.csv", height = 500 }) {
     yAxis: {
       type: "value",
 
+      min: 100e6,
+
       name: "Hectares",
 
       axisLabel: {
