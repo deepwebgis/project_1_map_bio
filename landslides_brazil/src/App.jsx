@@ -12,8 +12,9 @@ function App() {
       {/* HEADER MOBILE */}
       <div className="md:hidden flex items-center justify-between px-4 py-3 border-b border-gray-800 bg-gray-900">
         <div>
-          <p className="font-semibold text-lg">Landslide Open Datasets</p>
-          <p className="text-sm text-gray-400">Brazil</p>
+          <p className="font-semibold text-lg">
+            Landslide Open Datasets - Brazil
+          </p>
         </div>
 
         <button
@@ -35,9 +36,8 @@ function App() {
         {/* HEADER DESKTOP */}
         <div className="hidden md:block px-6 py-6 border-b border-gray-800">
           <p className="font-semibold text-3xl leading-snug">
-            Landslide Open Datasets
+            Landslide Open Datasets - Brazil
           </p>
-          <p className="text-gray-400">Brazil</p>
         </div>
 
         {/* LISTA */}
